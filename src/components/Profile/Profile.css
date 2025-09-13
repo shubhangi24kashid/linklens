@@ -1,0 +1,130 @@
+/* Profile.css */
+
+/* ===================== */
+/* Profile Page Layout   */
+/* ===================== */
+.profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  background: #fff; /* White background for contrast */
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Profile Card */
+.profile-card {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  filter: grayscale(100%); /* Black & White theme */
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile Icon (on profile page, monochrome) */
+.profile-icon {
+  font-size: 70px;
+  color: #000; /* Black for profile page */
+  margin-bottom: 12px;
+  filter: grayscale(100%);
+}
+
+.profile-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 8px 0 20px;
+  color: #000; /* Black text */
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+/* Info rows */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  background: #fafafa;
+  transition: background 0.3s ease;
+}
+
+.info-row:hover {
+  background: #f0f0f0;
+}
+
+.info-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000; /* Black labels */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-value {
+  font-size: 15px;
+  color: #444; /* Dark gray values */
+  text-align: right;
+}
+
+/* Plan Badge */
+.plan-badge {
+  background: #000;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .profile-card {
+    padding: 25px 18px;
+  }
+
+  .profile-card h2 {
+    font-size: 20px;
+  }
+
+  .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .info-value {
+    text-align: left;
+  }
+}
+
+/* ===================== */
+/* Navbar Profile Icon   */
+/* ===================== */
+.navbar-profile-icon {
+  font-size: 22px;
+  color: #fff; /* White for navbar */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-profile-icon:hover {
+  color: #ddd; /* Light gray hover */
+}
