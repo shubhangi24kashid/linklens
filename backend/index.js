@@ -13,6 +13,11 @@ app.use(express.json());
 
 // Routes
 app.use("/api/links", linksRouter);
+// Root route (for browser check)
+app.get("/", (req, res) => {
+  res.send("<h2>✅ Backend is running on port 5000</h2>");
+});
+
 
 // Start server
 const PORT = process.env.PORT || 5000;
