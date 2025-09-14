@@ -18,7 +18,7 @@ const AddLink = () => {
     }
 
     try {
-      // Basic URL validation before sending to backend
+      // ✅ Basic URL validation
       new URL(link);
     } catch {
       setErrorMsg("Invalid URL format. Please check and try again.");
@@ -33,19 +33,27 @@ const AddLink = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/links/add", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          url: link,
-          userId: auth.currentUser.uid,
-        }),
-      });
+      // ✅ Call backend /add (it already checks duplicates)
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/api/links/add`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            url: link,
+            userId: auth.currentUser.uid,
+          }),
+        }
+      );
 
       const data = await response.json();
+
       if (response.ok) {
         setSuccessMsg("Link added successfully!");
         setLink("");
+      } else if (data.error?.includes("already exists")) {
+        // ✅ Show clear duplicate message
+        setErrorMsg("This link is already saved.");
       } else {
         setErrorMsg(data.error || "Failed to add link. Try again.");
       }

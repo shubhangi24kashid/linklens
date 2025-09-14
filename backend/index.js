@@ -3,6 +3,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const linksRouter = require("./routes/links");
+const { db } = require("./config/firebase"); // Import only
 
 const app = express();
 
