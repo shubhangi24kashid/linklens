@@ -57,29 +57,26 @@ LinkLens is a full-stack web application designed to help users **save, organize
 ## ⚡ Setup & Installation
 
 ### 1️⃣ Clone the Repository
-```bash
+
 git clone https://github.com/linklens.git
 cd linklens
-2️⃣ Install Dependencies
-Frontend
 
-bash
+2️⃣ Install Dependencies
+Frontend:
 Copy code
 cd frontend
 npm install
 cd ..
-Backend
 
-bash
+Backend:
 Copy code
 cd backend
 npm install
 cd ..
+
 3️⃣ Setup Environment Variables
 Backend .env
 
-env
-Copy code
 PORT=5000
 HF_API_KEY=your_huggingface_api_key
 FIREBASE_PROJECT_ID=your_project_id
@@ -91,24 +88,17 @@ FIREBASE_AUTH_URI=https://accounts.google.com/o/oauth2/auth
 FIREBASE_TOKEN_URI=https://oauth2.googleapis.com/token
 FIREBASE_AUTH_PROVIDER_CERT_URL=https://www.googleapis.com/oauth2/v1/certs
 FIREBASE_CLIENT_CERT_URL=your_cert_url
+
 Frontend .env
-
-env
-Copy code
 REACT_APP_API_URL=http://localhost:5000
-▶️ Run Locally
-Backend
 
-bash
-Copy code
+▶️ Run Locally
+Backend:
 cd backend
 npm start
 Runs on: http://localhost:5000
 
-Frontend
-
-bash
-Copy code
+Frontend:
 cd frontend
 npm start
 Runs on: http://localhost:3000
