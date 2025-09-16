@@ -58,49 +58,49 @@ LinkLens is a full-stack web application designed to help users **save, organize
 
 ### 1️⃣ Clone the Repository
 
-git clone https://github.com/linklens.git
-cd linklens
+-git clone https://github.com/linklens.git
+-cd linklens
 
 2️⃣ Install Dependencies
 Frontend:
-Copy code
-cd frontend
-npm install
-cd ..
+-Copy code
+-cd frontend
+-npm install
+-cd ..
 
 Backend:
-Copy code
-cd backend
-npm install
-cd ..
+-Copy code
+-cd backend
+-npm install
+-cd ..
 
 3️⃣ Setup Environment Variables
-Backend .env
+-Backend .env
 
-PORT=5000
-HF_API_KEY=your_huggingface_api_key
-FIREBASE_PROJECT_ID=your_project_id
-FIREBASE_PRIVATE_KEY_ID=your_private_key_id
-FIREBASE_PRIVATE_KEY="your_private_key"
-FIREBASE_CLIENT_EMAIL=your_client_email
-FIREBASE_CLIENT_ID=your_client_id
-FIREBASE_AUTH_URI=https://accounts.google.com/o/oauth2/auth
-FIREBASE_TOKEN_URI=https://oauth2.googleapis.com/token
-FIREBASE_AUTH_PROVIDER_CERT_URL=https://www.googleapis.com/oauth2/v1/certs
-FIREBASE_CLIENT_CERT_URL=your_cert_url
+-PORT=5000
+-HF_API_KEY=your_huggingface_api_key
+-FIREBASE_PROJECT_ID=your_project_id
+-FIREBASE_PRIVATE_KEY_ID=your_private_key_id
+-FIREBASE_PRIVATE_KEY="your_private_key"
+-FIREBASE_CLIENT_EMAIL=your_client_email
+-FIREBASE_CLIENT_ID=your_client_id
+-FIREBASE_AUTH_URI=https://accounts.google.com/o/oauth2/auth
+-FIREBASE_TOKEN_URI=https://oauth2.googleapis.com/token
+-FIREBASE_AUTH_PROVIDER_CERT_URL=https://www.googleapis.com/oauth2/v1/certs
+-FIREBASE_CLIENT_CERT_URL=your_cert_url
 
 Frontend .env
-REACT_APP_API_URL=http://localhost:5000
+-REACT_APP_API_URL=http://localhost:5000
 
 ▶️ Run Locally
 Backend:
-cd backend
-npm start
-Runs on: http://localhost:5000
+-cd backend
+-npm start
+-Runs on: http://localhost:5000
 
 Frontend:
-cd frontend
-npm start
-Runs on: http://localhost:3000
+-cd frontend
+-npm start
+-Runs on: http://localhost:3000
 
-Open in your browser: http://localhost:3000
+###Open in your browser: http://localhost:3000
